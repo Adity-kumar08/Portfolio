@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aditya Kumar Portfolio
 
-## Getting Started
+A premium, production-quality personal portfolio website built for modern web standards.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Language**: TypeScript
+
+## Features
+
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile.
+- **Dark Theme**: Minimal, modern, and technical visual direction.
+- **Configurable Content**: Data is decoupled from the UI (`src/data/`).
+- **Interactive UI**: Smooth scroll, scroll-reveal animations, hover states.
+- **SEO Optimized**: Appropriate metadata and semantic structure.
+
+## Project Structure
+
+```
+/src
+  /app           # Next.js App Router (pages, layout, styles)
+  /components
+    /layout      # Navbar, Footer
+    /sections    # Hero, About, Projects, Experience, Skills, Contact
+  /data          # Centralized configuration (projects, skills, personal, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+3. Production testing:
+   ```bash
+   npm run build
+   npm run start
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+## Vercel Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is configured specifically for reliable deployment on Vercel. 
+It uses standard Next.js features and does not require a custom `vercel.json` or custom build scripts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To deploy:
+1. Push the code to a GitHub repository.
+2. Import the repository into Vercel.
+3. Vercel will automatically detect the Next.js framework and build the project.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No environment variables are required by default, but if you add a backend email service later, you can securely configure the keys in the Vercel dashboard.
